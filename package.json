@@ -1,6 +1,6 @@
 {
-  "name": "@lyndonkl/gemma",
-  "version": "0.1.4",
+  "name": "@lyndonkl/gemma-webworker-wrapper",
+  "version": "0.1.8",
   "description": "A TypeScript wrapper for the MediaPipe Gemma model",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,9 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
@@ -39,6 +42,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lyndonkl/agentic-data-analysis.git"
+    "url": "git+https://github.com/lyndonkl/gemma-worker-wrapper.git"
   }
 }

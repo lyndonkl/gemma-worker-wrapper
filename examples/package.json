@@ -10,7 +10,7 @@
     "predev": "mkdir -p public/worker && esbuild node_modules/@lyndonkl/gemma-webworker-wrapper/dist/worker.js --bundle --format=iife --outfile=public/worker/worker.js"
   },
   "dependencies": {
-    "@lyndonkl/gemma-webworker-wrapper": "^0.1.6",
+    "@lyndonkl/gemma-webworker-wrapper": "^0.1.8",
     "@mediapipe/tasks-genai": "^0.10.22",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

@@ -22,7 +22,7 @@ export class GemmaWrapper {
 
   private constructor(options: GemmaWrapperOptions = {}) {
     this.systemMessage = options.systemMessage || '';
-    this.worker = new Worker(new URL('./worker.js', import.meta.url).toString(),{ type: "module" })
+    this.worker = new Worker(new URL(options.workerUrl || './worker.js', import.meta.url).toString())
   }
 
   public static async create(options: GemmaWrapperOptions = {}): Promise<GemmaWrapper> {

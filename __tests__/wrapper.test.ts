@@ -77,7 +77,7 @@ describe('GemmaWrapper', () => {
 
       // Verify Worker was created with correct URL
       // @ts-ignore - Worker is not available in Node environment
-      expect(global.Worker).toHaveBeenCalledWith('file:///Users/kushaldsouza/Documents/Projects/agentic_data_analysis/src/gemma/worker.js', {"type": "module"});
+      expect(global.Worker).toHaveBeenCalledWith('file:///Users/kushaldsouza/Documents/Projects/gemma-worker-wrapper/mock-worker.js');
 
       // Verify postMessage was called with default initialization options
       expect(mockWorker.postMessage).toHaveBeenCalledWith({
@@ -106,7 +106,7 @@ describe('GemmaWrapper', () => {
 
       // Verify worker was created
       // @ts-ignore - Worker is not available in Node environment
-      expect(global.Worker).toHaveBeenCalledWith('file:///Users/kushaldsouza/Documents/Projects/agentic_data_analysis/src/gemma/worker.js', {"type": "module"});
+      expect(global.Worker).toHaveBeenCalledWith('file:///Users/kushaldsouza/Documents/Projects/gemma-worker-wrapper/worker.js');
 
       // Verify postMessage was called with correct initialization options
       expect(mockWorker.postMessage).toHaveBeenCalledWith({
@@ -128,7 +128,7 @@ describe('GemmaWrapper', () => {
 
       // Verify worker was created
       // @ts-ignore - Worker is not available in Node environment
-      expect(global.Worker).toHaveBeenCalledWith('file:///Users/kushaldsouza/Documents/Projects/agentic_data_analysis/src/gemma/worker.js', {"type": "module"});
+      expect(global.Worker).toHaveBeenCalledWith('file:///Users/kushaldsouza/Documents/Projects/gemma-worker-wrapper/worker.js');
 
       // Verify postMessage was called with correct initialization options
       expect(mockWorker.postMessage).toHaveBeenCalledWith({
