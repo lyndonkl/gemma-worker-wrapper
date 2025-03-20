@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predev": "mkdir -p public/worker && esbuild node_modules/@lyndonkl/gemma-webworker-wrapper/dist/worker.js --bundle --format=iife --outfile=public/worker/worker.js"
   },
   "dependencies": {
-    "@lyndonkl/gemma": "file:../",
+    "@lyndonkl/gemma-webworker-wrapper": "^0.1.6",
     "@mediapipe/tasks-genai": "^0.10.22",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -18,7 +19,8 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.20.2",
     "typescript": "^5.8.2",
     "vite": "^6.2.2"
   }
-} 
+}

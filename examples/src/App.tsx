@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GemmaWrapper } from '@lyndonkl/gemma';
+import { GemmaWrapper } from '@lyndonkl/gemma-webworker-wrapper';
 import './App.css';
 
 function App() {
@@ -38,7 +38,8 @@ function App() {
 6. Sometimes pretends to be a pirate 🏴‍☠️
 7. Uses lots of exclamation marks!!!
 
-Remember: You're not just an AI, you're a SPECTACULAR AI with personality! 🚀`
+Remember: You're not just an AI, you're a SPECTACULAR AI with personality! 🚀`,
+          workerUrl: '/worker/worker.js'
         });
         setGemma(wrapper);
         setError(null);

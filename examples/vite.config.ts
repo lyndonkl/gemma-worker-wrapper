@@ -7,13 +7,18 @@ export default defineConfig({
   server: {
     port: 3000,
     headers: {
-      'Cross-Origin-Embedder-Policy': 'require-corp',
+      'Cross-Origin-Embedder-Policy': 'credentialless',
       'Cross-Origin-Opener-Policy': 'same-origin',
-      'Cross-Origin-Resource-Policy': 'cross-origin'
+      'Cross-Origin-Resource-Policy': 'cross-origin',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization'
     }
   },
   optimizeDeps: {
-    exclude: ['@mediapipe/tasks-genai']
+    exclude: [
+      '@mediapipe/tasks-genai'
+    ]
   },
   build: {
     target: 'esnext',
@@ -27,11 +32,17 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@mediapipe/tasks-genai': resolve(__dirname, 'node_modules/@mediapipe/tasks-genai'),
-      '@lyndonkl/gemma': resolve(__dirname, '../dist')
+      '@mediapipe/tasks-genai': resolve(__dirname, 'node_modules/@mediapipe/tasks-genai')
     }
   },
   ssr: {
     noExternal: ['@mediapipe/tasks-genai']
+  },
+  assetsInclude: ['**/*.js'],
+  publicDir: 'public',
+  base: '/',
+  worker: {
+    format: 'iife',
+    plugins: () => []
   }
 }); 
