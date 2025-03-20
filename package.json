@@ -1,0 +1,44 @@
+{
+  "name": "@lyndonkl/gemma",
+  "version": "0.1.4",
+  "description": "A TypeScript wrapper for the MediaPipe Gemma model",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint src/**/*.ts"
+  },
+  "peerDependencies": {
+    "@mediapipe/tasks-genai": "^0.10.22"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "ts-jest-mock-import-meta": "^1.2.1",
+    "typescript": "^5.8.2"
+  },
+  "keywords": [
+    "gemma",
+    "llm",
+    "ai",
+    "typescript",
+    "mediapipe"
+  ],
+  "author": "Agentic Data Analysis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyndonkl/agentic-data-analysis.git"
+  }
+}
